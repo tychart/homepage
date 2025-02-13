@@ -4,7 +4,7 @@ const Projects = () => {
     const [repos, setRepos] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.github.com/users/TylerChartrand/repos')
+        fetch('https://api.github.com/users/tychart/repos')
             .then(response => response.json())
             .then(data => {
                 console.log('GitHub API response:', data); // Debugging
