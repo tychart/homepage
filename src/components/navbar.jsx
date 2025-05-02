@@ -16,7 +16,7 @@ const Navbar = () => {
                         <a href="#resume" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
                             Resume
                         </a>
-                        <a href="https://github.com/TylerChartrand" 
+                        <a href="https://github.com/tychart" 
                            target="_blank" 
                            rel="noopener noreferrer"
                            className="flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-300">
