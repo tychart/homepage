@@ -1,4 +1,5 @@
 # Tyler Chartrand
+
 [Tyler@TheChartrands.com](mailto:Tyler@TheChartrands.com) | (346) 549-9154 | [www.linkedin.com/in/tyler-chartrand-17a778175](www.linkedin.com/in/tyler-chartrand-17a778175)
 
 ## Education

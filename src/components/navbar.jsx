@@ -1,21 +1,22 @@
 import React from 'react';
 
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="bg-white shadow-lg fixed w-full z-10">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between items-center py-4">
-                    <h1 className="text-2xl font-bold text-gray-800">
+                    <NavLink to='' className="text-2xl font-bold text-gray-800">
                         Tyler Chartrand
-                    </h1>
+                    </NavLink>
                     <div className="hidden md:flex space-x-8">
                         <a href="#projects" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
                             Projects
                         </a>
-                        <a href="#resume" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        <NavLink to="resume" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
                             Resume
-                        </a>
+                        </NavLink>
                         <a href="https://github.com/tychart" 
                            target="_blank" 
                            rel="noopener noreferrer"
