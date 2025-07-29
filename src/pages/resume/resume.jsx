@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import resumeContent from '/src/assets/resume.md?raw'; // Load the raw text of the Markdown file
 
-const resumeContentAlt = "# Hi, *Pluto*"
+const resumeContentAlt = `# Hi, *Pluto*
+### This is a test!`
 
 export function Resume(props) {
 
@@ -12,10 +13,10 @@ export function Resume(props) {
     {/* <section className="px-4 py-8"> */}
       <div className="prose prose-neutral dark:prose-invert max-w-3xl mx-auto">
       {/* <div> */}
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <Markdown remarkPlugins={[remarkGfm]}>
         {/* {resumeContent} */}
         {resumeContentAlt}
-        </ReactMarkdown>
+        </Markdown>
       </div>
     </section>
   );
