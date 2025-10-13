@@ -1,2 +1,4 @@
 @import "tailwindcss";
 @plugin "./typography.js";
+
+@custom-variant dark (&:where(.dark, .dark *));

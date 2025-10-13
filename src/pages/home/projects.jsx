@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const projects = [
   {
@@ -6,31 +6,43 @@ const projects = [
     title: "Project One",
     description: "A brief description of project one.",
     image: "/path-to-image1.jpg",
-    techStack: ["React", "Node.js", "MongoDB"]
+    techStack: ["React", "Node.js", "MongoDB"],
   },
   {
     id: 2,
     title: "Project Two",
     description: "A brief description of project two.",
     image: "/path-to-image2.jpg",
-    techStack: ["TypeScript", "Express", "PostgreSQL"]
-  }
+    techStack: ["TypeScript", "Express", "PostgreSQL"],
+  },
   // Add more projects as needed
 ];
 
 const Projects = () => (
-  <section className="py-20 bg-gray-50" id="projects">
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-      <div className="grid md:grid-cols-2 gap-8">
+  <section className="py-20" id="projects">
+    <div className="mx-auto max-w-6xl px-4">
+      <h2 className="mb-12 text-center text-3xl font-bold">
+        Featured Projects
+      </h2>
+      <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project) => (
-          <div key={project.id} className="bg-white rounded-xl p-6 hover:shadow-xl transition-shadow duration-300">
-            <img src={project.image} alt={project.title} className="w-full h-64 object-cover rounded-lg mb-4"/>
-            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-            <p className="text-gray-600 mb-4">{project.description}</p>
+          <div
+            key={project.id}
+            className="rounded-xl bg-white p-6 transition-shadow duration-300 hover:shadow-xl"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="mb-4 h-64 w-full rounded-lg object-cover"
+            />
+            <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
+            <p className="mb-4 text-gray-600">{project.description}</p>
             <div className="flex space-x-4">
               {project.techStack.map((tech) => (
-                <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
+                <span
+                  key={tech}
+                  className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-600"
+                >
                   {tech}
                 </span>
               ))}

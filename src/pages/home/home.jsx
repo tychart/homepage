@@ -1,4 +1,5 @@
-import Projects from './projects';
+import Projects from "./projects";
+import profileImage from "../../assets/profile_picture.jpg";
 
 const Home = () => {
   return (
@@ -7,45 +8,51 @@ const Home = () => {
       <SkillsSection />
       <Projects />
     </div>
-  )
-}
+  );
+};
 
-  const HeroSection = () => (
-    <section className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-32">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2">
-            <h1 className="text-5xl font-bold text-gray-800 mb-6">
-              Full Stack Developer
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Building digital experiences with React, Node.js, and modern web technologies
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-              View Projects
-            </button>
+const HeroSection = () => (
+  <section className="min-h-screen bg-gradient-to-b pt-32">
+    <div className="mx-auto max-w-6xl px-4">
+      <div className="flex flex-col items-center md:flex-row">
+        <div className="md:w-1/2">
+          <h1 className="mb-6 text-5xl font-bold text-gray-800 dark:text-gray-100">
+            Full Stack Developer
+          </h1>
+          <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
+            Building digital experiences with React, Node.js, and modern web
+            technologies
+          </p>
+          <button className="rounded-lg bg-blue-600 px-8 py-3 text-white transition-colors duration-300 hover:bg-blue-700">
+            View Projects
+          </button>
+        </div>
+        <img
+          className="mt-10 h-auto w-48 rounded-xl border-4 border-slate-300 object-cover shadow-lg md:mt-0 md:ml-auto md:w-80"
+          src={profileImage}
+          alt="Image"
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const SkillsSection = () => (
+  <section className="bg-white py-20" id="skills">
+    <div className="mx-auto max-w-6xl px-4">
+      <h2 className="mb-12 text-center text-3xl font-bold">Technical Skills</h2>
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        {["React", "Node.js", "TypeScript", "MongoDB"].map((skill) => (
+          <div
+            key={skill}
+            className="rounded-xl bg-gray-50 p-6 transition-shadow duration-300 hover:shadow-lg"
+          >
+            <h3 className="text-center text-xl font-semibold">{skill}</h3>
           </div>
-          {/* Add your profile illustration or image here */}
-        </div>
+        ))}
       </div>
-    </section>
-  );
-  
-  const SkillsSection = () => (
-    <section className="py-20 bg-white" id="skills">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Technical Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {['React', 'Node.js', 'TypeScript', 'MongoDB'].map((skill) => (
-            <div key={skill} className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-center">{skill}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-  
-
+    </div>
+  </section>
+);
 
 export default Home;
