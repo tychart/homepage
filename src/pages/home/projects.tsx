@@ -1,12 +1,14 @@
-import React from "react";
+import tetrisImage from "../../assets/tetris_login.png";
 
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "A brief description of project one.",
-    image: "/path-to-image1.jpg",
-    techStack: ["React", "Node.js", "MongoDB"],
+    title: "Tetris Dual",
+    description:
+      "This spin off of classic tetris allows you to play Tetris aginst an opponent, where the last person standing wins. This uses websockets along with a custom compresson algorithm to be able to give real time updates of the gameboard between the 2 players.",
+    image: tetrisImage,
+    techStack: ["React", "Node.js", "MongoDB", "WebSocket"],
+    link: "https://github.com/tychart/tetrisdual",
   },
   {
     id: 2,
@@ -14,6 +16,7 @@ const projects = [
     description: "A brief description of project two.",
     image: "/path-to-image2.jpg",
     techStack: ["TypeScript", "Express", "PostgreSQL"],
+    link: "https://github.com/tychart/tetrisdual",
   },
   // Add more projects as needed
 ];
@@ -21,14 +24,17 @@ const projects = [
 const Projects = () => (
   <section className="py-20" id="projects">
     <div className="mx-auto max-w-6xl px-4">
-      <h2 className="mb-12 text-center text-3xl font-bold">
+      <h2 className="mb-12 text-center text-3xl font-bold dark:text-gray-100">
         Featured Projects
       </h2>
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project) => (
-          <div
+          <a
             key={project.id}
             className="rounded-xl bg-white p-6 transition-shadow duration-300 hover:shadow-xl"
+            href={project.link}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <img
               src={project.image}
@@ -47,7 +53,7 @@ const Projects = () => (
                 </span>
               ))}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

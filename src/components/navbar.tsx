@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface props {
   darkMode: boolean;

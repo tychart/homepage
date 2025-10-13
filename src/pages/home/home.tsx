@@ -38,18 +38,22 @@ const HeroSection = () => (
 );
 
 const SkillsSection = () => (
-  <section className="bg-white py-20" id="skills">
+  <section className="bg-white py-20 dark:bg-gray-800" id="skills">
     <div className="mx-auto max-w-6xl px-4">
-      <h2 className="mb-12 text-center text-3xl font-bold">Technical Skills</h2>
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-        {["React", "Node.js", "TypeScript", "MongoDB"].map((skill) => (
-          <div
-            key={skill}
-            className="rounded-xl bg-gray-50 p-6 transition-shadow duration-300 hover:shadow-lg"
-          >
-            <h3 className="text-center text-xl font-semibold">{skill}</h3>
-          </div>
-        ))}
+      <h2 className="mb-12 text-center text-3xl font-bold dark:text-gray-100">
+        Technical Skills
+      </h2>
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
+        {["React", "Ansible", "Node.js", "TypeScript", "MongoDB"].map(
+          (skill) => (
+            <div
+              key={skill}
+              className="rounded-xl bg-gray-50 p-4 transition-shadow duration-300 hover:shadow-lg dark:bg-blue-600"
+            >
+              <h3 className="text-center text-xl font-semibold">{skill}</h3>
+            </div>
+          ),
+        )}
       </div>
     </div>
   </section>
