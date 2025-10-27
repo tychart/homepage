@@ -1,7 +1,22 @@
 import Projects from "./projects";
 import profileImage from "../../assets/profile_picture.jpg";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  const location = useLocation();
+
+  // When the URL contains a hash (e.g., /#projects), scroll to that element
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1); // strip the '#'
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <HeroSection />

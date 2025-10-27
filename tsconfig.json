@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // modern JS target
+    "useDefineForClassFields": true, // recommended by React and Vite
+    "lib": ["dom", "dom.iterable", "esnext"], // support for DOM and latest JS libs
+    "allowJs": true, // allow JS files alongside TS
+    "skipLibCheck": true, // speeds up builds by skipping .d.ts lib checks
+    "esModuleInterop": false, // keep consistent with Vite default
+    "allowSyntheticDefaultImports": true, // allow default imports from commonjs
+    "strict": true, // enable strict type-checking
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext", // use ES modules
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true, // Required for Vite and React
+    "noEmit": true, // Do not output compiled files (Vite handles that)
+    "jsx": "react-jsx", // Use the new React JSX transform
+    "baseUrl": ".", // Base for module resolution
+    "paths": {
+      // Optional: if you use path aliases
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "src/types", "declarations.d.ts"], // Importantly include your src and types folders
+  "exclude": ["node_modules", "dist"]
+}

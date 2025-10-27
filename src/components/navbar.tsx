@@ -22,12 +22,12 @@ const Navbar = ({ darkMode, setDarkMode }: props) => {
             Tyler Chartrand
           </NavLink>
           <div className="hidden space-x-8 md:flex">
-            <a
-              href="#projects"
+            <NavLink
+              to={{ pathname: "/", hash: "#projects" }}
               className="rounded-xl p-2 text-gray-600 transition-colors duration-300 hover:bg-gray-200 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-blue-200"
             >
               Projects
-            </a>
+            </NavLink>
             <NavLink
               to="resume"
               className="rounded-xl p-2 text-gray-600 transition-colors duration-300 hover:bg-gray-200 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-blue-200"
