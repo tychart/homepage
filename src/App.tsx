@@ -57,7 +57,7 @@ const App = () => {
 const Footer = () => (
   <footer className="bg-gray-800 py-8 text-white">
     <div className="mx-auto max-w-6xl px-4 text-center">
-      <p>&copy; 2025 Tyler Chartrand. All rights reserved.</p>
+      <p>&copy; 2026 Tyler Chartrand. All rights reserved.</p>
     </div>
   </footer>
 );
