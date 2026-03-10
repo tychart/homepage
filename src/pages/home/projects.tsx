@@ -1,4 +1,6 @@
 import tetrisImage from "../../assets/tetris_login.png";
+import recipebookImage from "../../assets/recipebook_login.png";
+import homepageImage from "../../assets/homepage_picture.png";
 
 const projects = [
   {
@@ -7,16 +9,24 @@ const projects = [
     description:
       "This spin off of classic tetris allows you to play Tetris aginst an opponent, where the last person standing wins. This uses websockets along with a custom compresson algorithm to be able to give real time updates of the gameboard between the 2 players.",
     image: tetrisImage,
-    techStack: ["React", "Node.js", "MongoDB", "WebSocket"],
+    techStack: ["React", "Bootstrap", "Node.js", "MongoDB", "WebSocket"],
     link: "https://github.com/tychart/tetrisdual",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "A brief description of project two.",
-    image: "/path-to-image2.jpg",
-    techStack: ["TypeScript", "Express", "PostgreSQL"],
-    link: "https://github.com/tychart/tetrisdual",
+    title: "RecipeBook",
+    description: "RecipeBook is a fully open source, self hostable recipie database and manager. Each user can upload their own recipies and easily share and collaberate with others.",
+    image: recipebookImage,
+    techStack: ["React", "TailwindCSS", "Typescript", "FastAPI", "PostgreSQL", "S3", "Ollama"],
+    link: "https://github.com/tychart/recipebook",
+  },
+  {
+    id: 3,
+    title: "Homepage",
+    description: "This is the custom made webpage you are looking at that I made for my portfolio. This is being served all completely self-hosted in my homelab by an Nginx docker container running on my production VM on Proxmox",
+    image: homepageImage,
+    techStack: ["React", "TailwindCSS", "Typescript", "Nginx"],
+    link: "https://github.com/tychart/recipebook",
   },
   // Add more projects as needed
 ];
@@ -43,11 +53,11 @@ const Projects = () => (
             />
             <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
             <p className="mb-4 text-gray-600">{project.description}</p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-600"
+                  className="max-w-full rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-600 break-words whitespace-normal"
                 >
                   {tech}
                 </span>

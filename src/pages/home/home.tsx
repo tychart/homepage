@@ -59,7 +59,7 @@ const SkillsSection = () => (
         Technical Skills
       </h2>
       <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
-        {["React", "Ansible", "Node.js", "TypeScript", "MongoDB"].map(
+      {["React", "Docker", "Node.js", "TypeScript", "PostgresSQL"].map(
           (skill) => (
             <div
               key={skill}
