@@ -15,7 +15,7 @@ const projects = [
   {
     id: 2,
     title: "RecipeBook",
-    description: "RecipeBook is a fully open source, self hostable recipie database and manager. Each user can upload their own recipies and easily share and collaberate with others.",
+    description: "RecipeBook is a fully open source, self hostable recipe database and manager. Each user can upload their own recipes and easily share and collaberate with others.",
     image: recipebookImage,
     techStack: ["React", "TailwindCSS", "Typescript", "FastAPI", "PostgreSQL", "S3", "Ollama"],
     link: "https://github.com/tychart/recipebook",
