@@ -1,7 +1,7 @@
 import Projects from "./projects";
 import profileImage from "../../assets/profile_picture.jpg";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Home = () => {
   const location = useLocation();
@@ -38,9 +38,20 @@ const HeroSection = () => (
             Building digital experiences with React, Node.js, and modern web
             technologies
           </p>
-          <button className="rounded-lg bg-blue-600 px-8 py-3 text-white transition-colors duration-300 hover:bg-blue-700">
-            View Projects
-          </button>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              to={{ pathname: "/", hash: "#projects" }}
+              className="inline-flex w-44 items-center justify-center rounded-lg bg-blue-600 px-8 py-3 text-white transition-colors duration-300 hover:bg-blue-700"
+            >
+              View Projects
+            </Link>
+            <Link
+              to="/resume"
+              className="inline-flex w-44 items-center justify-center rounded-lg border-2 border-blue-600 bg-blue-50 px-8 py-3 text-blue-700 transition-colors duration-300 hover:bg-blue-100 dark:border-blue-300 dark:bg-blue-900/30 dark:text-blue-200 dark:hover:bg-blue-900/50"
+            >
+              View Resume
+            </Link>
+          </div>
         </div>
         <img
           className="mt-10 h-auto w-48 rounded-xl border-4 border-slate-300 object-cover shadow-lg md:mt-0 md:ml-auto md:w-80"
