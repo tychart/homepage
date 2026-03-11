@@ -23,10 +23,10 @@ const projects = [
   {
     id: 3,
     title: "Homepage",
-    description: "This is the custom made webpage you are looking at that I made for my portfolio. This is being served all completely self-hosted in my homelab by an Nginx docker container running on my production VM on Proxmox",
+    description: "This is the custom made portfolio webpage you are currently looking at. This is being served all completely self-hosted in my homelab by an Nginx docker container running on my production VM on Proxmox",
     image: homepageImage,
     techStack: ["React", "TailwindCSS", "Typescript", "Nginx"],
-    link: "https://github.com/tychart/recipebook",
+    link: "https://github.com/tychart/homepage",
   },
   // Add more projects as needed
 ];
