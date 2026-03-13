@@ -2,7 +2,7 @@
 
 [tyler@thechartrands.com](mailto:Tyler@TheChartrands.com) | [linkedin.com/in/tychart](linkedin.com/in/tychart) | [github.com/tychart](github.com/tychart)
 
-## Professional Summery
+## Professional Summary
 Software engineer with production infrastructure experience and a strong focus on system design, automation, and scalable architecture. Experienced leading engineering teams, building distributed systems, and deploying containerized applications across cloud and self-hosted environments.
 
 
@@ -27,7 +27,7 @@ Software engineer with production infrastructure experience and a strong focus o
   <strong>2022 - Present</strong>
 </div>
 
-- **Developed** and managed automation and deployment scripts for RHEL 7, 8, 9 and Ubuntu servers, ensuring system
+- **Developed** and managed automation and deployment scripts for RHEL 7, 8, 9, and Ubuntu servers, ensuring system
 stability and scalability for a large-scale university network
 - **Collaborated** within an Agile team to modernize Windows Server infrastructure, leveraging Ansible AWX and SCCM for automated provisioning and deployment workflows
 - **Contributed** to a one-month production migration from VMware-based infrastructure to OpenShift virtualization,
@@ -51,7 +51,7 @@ strategies, vector-based retrieval, prompt optimization strategies, and custom t
 - **Built** a full-stack, multiplayer web game (Tetris) using React, Vite, and Node.js with a MongoDB backend, designing
 real-time state synchronization with WebSockets and deploying on AWS EC2 environments
 - **Developed** a multi-client chess application with a Java frontend and backend, leveraging a MySQL database to manage persistent game data
-- **Redesigned** an existing typescript and react application with to reduce code duplication, increase the modularity, and make the application more testable
+- **Redesigned** an existing Typescript and React application with to reduce code duplication, increase the modularity, and make the application more testable
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <strong>Full-Time Religious Volunteer | Church of Jesus Christ of Latter-day Saints</strong>
@@ -76,8 +76,8 @@ via Nginx on self-managed infrastructure
 - **Deployed** and optimized self-hosted AI inference services (Ollama, Whisper, Stable Diffusion) on consumer hardware, managing GPU acceleration and containerized workloads
 - **Possess 6+ years of experience** with Debian and Fedora based Linux operating systems, having exclusively used them as primary operating systems for 4 years
 - **Implemented** and maintained 12+ self-hosted services and multiple VMs on a custom NAS (ZFS redundancy across
-four SAS HDDs), including custom 3D printed parts. Using Backrest for incremental snapshot cloud backups
-- **Completed** various personal projects, including creating a Python program to download and organize BYU Speeches from the BYU Speech website using web scraping and regular expressions
+4 SAS HDDs), including custom 3D printed parts. Using Backrest for incremental snapshot cloud backups
+- **Completed** various personal projects, including creating a Python program to download and organize BYU Speeches from the BYU Speeches website using web scraping and regular expressions
 
 ## Experience Timeline
 
