@@ -1,6 +1,8 @@
 import tetrisImage from "../../assets/tetris_login.png";
-import recipebookImage from "../../assets/recipebook_login.png";
+import recipebookImage from "../../assets/recipebook_picture.png";
 import homepageImage from "../../assets/homepage_picture.png";
+import plannerrImage from "../../assets/planner_picture.png";
+import readflowImage from "../../assets/readflow_picture.png";
 
 const projects = [
   {
@@ -22,13 +24,44 @@ const projects = [
   },
   {
     id: 3,
+    title: "Plannerr",
+    description:
+      "A polished, self-hostable school planner that keeps assignments, quizzes, and exams in one installable PWA. It has class organization, markdown notes and links, offline caching, backups, and optional AI-written daily push summaries.",
+    image: plannerrImage,
+    techStack: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "FastAPI",
+      "PostgreSQL",
+      "PWA",
+    ],
+    link: "https://github.com/tychart/plannerr",
+  },
+  {
+    id: 4,
+    title: "ReadFlow",
+    description:
+      "A private long-form text-to-speech app for turning pasted text into buffered narration. A FastAPI scheduler batches Qwen3-TTS work on one GPU, streams chunk status over WebSockets, and serves a focused React reader UI.",
+    image: readflowImage,
+    techStack: [
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "WebSockets",
+      "Qwen3-TTS",
+      "PyTorch",
+    ],
+    link: "https://github.com/tychart/readflow",
+  },
+  {
+    id: 5,
     title: "Homepage",
     description: "This is the custom made portfolio webpage you are currently looking at. This is being served all completely self-hosted in my homelab by an Nginx docker container running on my production VM on Proxmox",
     image: homepageImage,
     techStack: ["React", "TailwindCSS", "Typescript", "Nginx"],
     link: "https://github.com/tychart/homepage",
-  },
-  // Add more projects as needed
+  }
 ];
 
 const Projects = () => (
@@ -41,27 +74,35 @@ const Projects = () => (
         {projects.map((project) => (
           <a
             key={project.id}
-            className="rounded-xl bg-white p-6 transition-shadow duration-300 hover:shadow-xl"
+            className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-400/60"
             href={project.link}
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="mb-4 h-64 w-full rounded-lg object-cover"
-            />
-            <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
-            <p className="mb-4 text-gray-600">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="max-w-full rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-600 break-words whitespace-normal"
-                >
-                  {tech}
-                </span>
-              ))}
+            <div className="overflow-hidden">
+              <img
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-gray-100">
+                {project.title}
+              </h3>
+              <p className="mb-5 text-gray-600 dark:text-gray-300">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="max-w-full rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700 break-words whitespace-normal dark:bg-blue-500/20 dark:text-blue-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </a>
         ))}
